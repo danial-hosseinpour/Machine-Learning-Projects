@@ -101,7 +101,7 @@ The script prints:
 ```
 Model training time: 8.42 seconds
 Mean Squared Error: 1.25
-R2 Score: 0.82
+R2 Score: 0.72
 ```
 
 ## Future Improvements
