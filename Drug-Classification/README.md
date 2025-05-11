@@ -1,90 +1,41 @@
-# Drug Prescription Classification Using Decision Trees
-
-This project explores a simple classification task using the **Drug200** dataset. A **Decision Tree Classifier** is trained to predict which drug a patient should be prescribed based on several health-related attributes.
-
----
-
-## 📌 Project Objective
-
-To classify which drug (`drugA`, `drugB`, `drugC`, `drugX`, or `drugY`) a patient will be prescribed based on:
-
-- Age  
-- Sex  
-- Blood Pressure (BP)  
-- Cholesterol  
-- Sodium to Potassium ratio (`Na_to_K`)  
+### Predicting Drug Types with Decision Tree Models built with:
+- **Python** for backend logic and data processing  
+- **Pandas** & **NumPy** for efficient data handling  
+- **Matplotlib** & **Seaborn** for data visualization  
+- **Scikit-Learn** for machine learning (**Decision Tree Classifier**)  
+- **LabelEncoder** for categorical feature encoding  
+- **Train-Test Split** for model validation  
 
 ---
 
-## 📂 Dataset
+# Drug Classification Using Decision Trees 
 
-- Source: [`Drug200`](https://www.kaggle.com/datasets/jeevanrh/drug200csv) from Kaggle  
-- Records: 200  
-- Features:
-  - Categorical: `Sex`, `BP`, `Cholesterol`
-  - Numerical: `Age`, `Na_to_K`
-  - Target: `Drug` (Drug type to be prescribed)
+This project applies **Decision Tree Classification** to predict drug types based on patient attributes like **age, blood pressure, cholesterol levels, and sodium-to-potassium ratio (Na_to_K)**. It uses entropy-based decision tree learning to classify medications into groups efficiently.  
 
----
-
-## 🛠️ Libraries & Tools
-
-- **Pandas / NumPy** for data handling  
-- **Seaborn / Matplotlib** for visualization  
-- **Scikit-learn** for:
-  - Label Encoding
-  - Train-Test Split
-  - Decision Tree Classifier
-  - Accuracy Metric
-  - Tree Visualization (`plot_tree`)  
-- **KaggleHub** for dataset access
+## Key Insights:  
+- Sodium-to-Potassium (Na_to_K) ratio is the strongest predictor of drug type.  
+- Blood pressure and cholesterol levels affect medication classification, contributing to model decisions.  
+- Decision Tree achieves high accuracy (98.3%), demonstrating its effectiveness in drug classification.  
+- Feature encoding improves model performance, allowing categorical values to be processed correctly.  
+- Entropy-based Decision Trees visualize classification logic, enabling transparent decision-making.  
 
 ---
 
-## 🧪 Methodology
+## Visualization Gallery 
 
-1. **Data Preprocessing**
-   - Categorical features encoded using `LabelEncoder`
-   - Target classes (`Drug`) mapped to numeric values for correlation analysis
-
-2. **Model Training**
-   - Used `DecisionTreeClassifier` from `sklearn`
-   - `entropy` criterion and different `max_depth` values tested
-   - Trained on 70% of the data, tested on 30%
-
-3. **Evaluation**
-   - Performance measured using `accuracy_score`
-   - Decision tree visualized using `plot_tree`
+- Decision Tree Structure for Drug Classification
+- Drug Distribution Among Patients
 
 ---
 
-## 📊 Results
+## Dependencies
 
-- Decision Tree with `max_depth=4`: Good balance between complexity and interpretability  
-- Accuracy varies depending on tree depth (sample results: ~0.90+)
-- Visualized tree reveals clear rules for drug classification
-
----
-
-## 📈 Visualization Samples
-
-- Countplot of drug distribution  
-- Decision tree diagram to illustrate model logic  
-- Correlation heatmap (optional based on extended version)
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
 
 ---
 
-## 🔍 Future Improvements
+## License  
 
-- Try other models like **Random Forest**, **XGBoost**, or **Logistic Regression**
-- Apply **cross-validation** to improve generalization
-- Perform **feature importance** analysis
-- Deploy as an **interactive app** (e.g., with Streamlit)
-
----
-
-## 💡 Final Note
-
-This is a simple but effective project to demonstrate **decision tree learning**, especially in the healthcare domain. It showcases how easy-to-understand models can still achieve good results with clean data and thoughtful preprocessing.
-
-
+This project is licensed under the MIT License.
